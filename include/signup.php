@@ -20,5 +20,15 @@ else echo "Connected successfully";
 */
 
 if (isset($_POST['fullname'])){
+    if (!preg_match("/^[a-zA-Z ]*$/",$fullname)){
+        echo "Only Letters and whitespace are allowed!";
+    }
     echo 'Your nanme is'. $_POST['fullname'];
 }
+if (isset($_POST['email'])){
+    echo 'Your nanme is'. $_POST['email'];
+}
+if (isset($_POST['password'])){
+    echo 'Your nanme is'. $_POST['password'];
+}
+
