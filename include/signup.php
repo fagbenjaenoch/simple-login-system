@@ -1,9 +1,9 @@
 <?php
 
 $hostname = "localhost";
-$fullname = "";
-$email = "";
-$password = "";
+$fullname = "fullname";
+$email = "email";
+$password = "userpassword";
 
 $dbconnect = mysql_connect($hostname,$fullname,$email,$password) || die ("Unable to connect to our servers");
 echo "Connected successfully";
