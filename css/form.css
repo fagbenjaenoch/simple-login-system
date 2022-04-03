@@ -12,6 +12,38 @@ body {
   --base: #0faf7a;
 }
 
+header {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 40px;
+}
+
+header .logo {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: var(--base);
+}
+
+ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+ul li {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
   color: var(--base);
@@ -57,7 +89,7 @@ form button {
 }
 
 form button:hover {
-  border: solid var(--base) 3px;
+  border: solid var(--base) 2px;
   background: none;
   color: var(--base);
   font-weight: bold;
@@ -75,6 +107,8 @@ p {
   max-width: fit-content;
   padding: 20px;
   border-radius: 10px;
-  margin: 120px auto;
+  margin: 20px auto;
+  position: relative;
+  top: 150px;
 }
 /*# sourceMappingURL=form.css.map */

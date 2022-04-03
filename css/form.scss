@@ -9,6 +9,28 @@ body{
 :root{
     --base: #0faf7a;
 }
+header{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+
+    .logo{
+        font-size: 1.3em;
+        font-weight: 900;
+        color: var(--base);
+    }
+}
+ul{
+    list-style-type: none;
+    display: flex;
+
+    li{
+        margin: 0 10px;
+        font-weight: 600;
+    }
+}
 a{
     text-decoration: none;
     color: var(--base);
@@ -60,5 +82,7 @@ p{
     max-width: fit-content;
     padding: 20px;
     border-radius: 10px;
-    margin: 120px auto;
+    margin: 20px auto;
+    position: relative;
+    top: 150px;
 }
