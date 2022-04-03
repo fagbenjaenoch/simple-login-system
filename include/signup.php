@@ -1,9 +1,37 @@
 <?php
 
-$hostname = "localhost";
-$fullname = "fullname";
-$email    = "email";
-$password = "password";
+if (isset($_POST['submit'])){
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password_repeat = $_POST['password_repeat'];
+
+    require_once 'dbh.php';
+    require_once 'functions.php';
+
+    if (emptyInputSignup( $fullname,$email,$password,$password_repeat) !== false){
+        header("location: ../signup.html?error=emptyinput");
+        exit();
+    }
+    if (invalidEmail($email) !== false){
+        header("location: ../signup.html?error=invalidemail");
+        exit();
+    }
+    if (passwordMatch($password,$password_repeat) !== false){
+        header("location: ../signup.html?error=passwordmismatch");
+        exit();
+    }
+    if (nameExists($conn,$fullname, $email) !== false){
+        header("location: ../signup.html?error=usernametaken");
+        exit();
+    }
+    createUser($conn, $fullname, $email, $password);
+    
+}
+else{
+    header("location: ../signup.html");
+    exit();
+}
 
 // $dbconnect = mysql_connect($hostname,$fullname,$email,$password) || die ("Unable to connect to our servers");
 // echo "Connected successfully";
@@ -19,14 +47,6 @@ if (!dbconnect){
 else echo "Connected successfully";
 */
 
-if (isset($_POST['fullname'])){
-    if (!preg_match("/^[a-zA-Z ]*$/",$fullname)){
-        echo "Only Letters and whitespace are allowed!";
-    }
-    echo 'Your name is '. $_POST['fullname'];
-}
-if (isset($_POST['email'])){
-    echo 'Your email is '. $_POST['email'];
-}
+
 
 
