@@ -2,11 +2,11 @@
 
 $hostname = "localhost";
 $fullname = "fullname";
-$email = "email";
-$password = "userpassword";
+$email    = "email";
+$password = "password";
 
-$dbconnect = mysql_connect($hostname,$fullname,$email,$password) || die ("Unable to connect to our servers");
-echo "Connected successfully";
+// $dbconnect = mysql_connect($hostname,$fullname,$email,$password) || die ("Unable to connect to our servers");
+// echo "Connected successfully";
 
 /* OR
 
@@ -23,12 +23,10 @@ if (isset($_POST['fullname'])){
     if (!preg_match("/^[a-zA-Z ]*$/",$fullname)){
         echo "Only Letters and whitespace are allowed!";
     }
-    echo 'Your nanme is'. $_POST['fullname'];
+    echo 'Your name is '. $_POST['fullname'];
 }
 if (isset($_POST['email'])){
-    echo 'Your nanme is'. $_POST['email'];
+    echo 'Your email is '. $_POST['email'];
 }
-if (isset($_POST['password'])){
-    echo 'Your nanme is'. $_POST['password'];
-}
+
 
