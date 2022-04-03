@@ -30,6 +30,7 @@ header .logo {
   font-size: 1.3em;
   font-weight: 900;
   color: var(--base);
+  cursor: pointer;
 }
 
 ul {
@@ -44,6 +45,16 @@ ul li {
   font-weight: 600;
 }
 
+ul li a {
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+ul li a:hover {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
   color: var(--base);
@@ -51,6 +62,13 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.active {
+  background: var(--base);
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
 }
 
 form {

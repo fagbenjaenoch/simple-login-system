@@ -20,6 +20,7 @@ header{
         font-size: 1.3em;
         font-weight: 900;
         color: var(--base);
+        cursor: pointer;
     }
 }
 ul{
@@ -29,6 +30,15 @@ ul{
     li{
         margin: 0 10px;
         font-weight: 600;
+
+        a{
+            transition: 400ms ease;
+
+            &:hover{
+                color: yellowgreen;
+                text-decoration: none;
+            }
+        }
     }
 }
 a{
@@ -38,6 +48,12 @@ a{
     &:hover{
         text-decoration: underline;
     }
+}
+.active{
+    background: var(--base);
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
 }
 form{
     display: flex;
