@@ -1,5 +1,4 @@
-<?php
-echo <<<_end
+
 <header>
 <div class="logo">Mailly</div>
 <nav>
@@ -12,5 +11,3 @@ echo <<<_end
     </ul>
 </nav>
 </header>
-_end;
-?>

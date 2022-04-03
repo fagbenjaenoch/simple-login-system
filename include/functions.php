@@ -1,5 +1,7 @@
 <?php
 
+require_once 'dbh.php';
+
 function emptyInputSignup( $fullname,$email,$password,$password_repeat){
     $result;
     if (empty($fullname) || empty($email) || empty($password) || empty($password_repeat)){
