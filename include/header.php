@@ -20,6 +20,10 @@
                     echo '<li><a href="profilepage.html.php">Profile page</a></li>
                     <li><a href="include/logout.php" class="active">Log out</a></li>';
                 }
+                else{
+                    echo '<li><a href="login.html.php">Login</a></li>
+                    <li><a href="signup.html.php" class="active">Signup</a></li>';
+                }
                 ?>
             </ul>
         </nav>
