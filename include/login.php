@@ -9,13 +9,13 @@ if (isset($_POST['submit'])){
     require_once 'functions.php';
 
     if(emptyInputLogin( $username, $password)){
-        header("location: ../signup.html?error=emptyinput");
+        header("location: ../signup.html.php?error=emptyinput");
         exit();
     }
 
     loginuser($conn, $username, $password);
 }
 else{
-    header("location: ../login.html");
+    header("location: ../login.html.php");
     exit();
 }

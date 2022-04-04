@@ -10,26 +10,26 @@ if (isset($_POST['submit'])){
     require_once 'functions.php';
 
     if (emptyInputSignup( $fullname,$email,$password,$password_repeat) !== false){
-        header("location: ../signup.html?error=emptyinput");
+        header("location: ../signup.html.php?error=emptyinput");
         exit();
     }
     if (invalidEmail($email) !== false){
-        header("location: ../signup.html?error=invalidemail");
+        header("location: ../signup.html.php?error=invalidemail");
         exit();
     }
     if (passwordMatch($password,$password_repeat) !== false){
-        header("location: ../signup.html?error=passwordmismatch");
+        header("location: ../signup.html.php?error=passwordmismatch");
         exit();
     }
     if (nameExists($conn,$fullname, $email) !== false){
-        header("location: ../signup.html?error=usernametaken");
+        header("location: ../signup.html.php?error=usernametaken");
         exit();
     }
     createUser($conn, $fullname, $email, $password);
     
 }
 else{
-    header("location: ../signup.html");
+    header("location: ../signup.html.php");
     exit();
 }
 

@@ -36,7 +36,7 @@ function nameExists($conn, $fullname, $email){
     $sql = "SELECT * FROM users WHERE usersName = ? OR usersEMail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt,$sql)){
-        header("location: ../signup.html?error=stmtfailed");
+        header("location: ../signup.html.php?error=stmtfailed");
         exit();
     }
 
@@ -58,7 +58,7 @@ function createUser($conn, $fullname, $email, $password){
     $sql = "INSERT INTO users (usersName, usersEmail, usersPassword) VALUES (?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt,$sql)){
-        header("location: ../signup.html?error=stmtfailed");
+        header("location: ../signup.html.php?error=stmtfailed");
         exit();
     }
 
@@ -67,7 +67,7 @@ function createUser($conn, $fullname, $email, $password){
     mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $hashedPassword);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.html?error=none");
+    header("location: ../signup.html.php?error=none");
 }
 function emptyInputLogin( $username, $password){
     $result;
@@ -82,7 +82,7 @@ function emptyInputLogin( $username, $password){
 function loginuser($conn, $username, $password){
     $userExists = nameExists($conn, $username, $username);
     if($userExists === false){
-        header("location: ../signup.html?error=wronglogin");
+        header("location: ../signup.html.php?error=wronglogin");
         exit();
     }
 
@@ -90,14 +90,14 @@ function loginuser($conn, $username, $password){
     $checkpassword = password_verify($password, $passwordHashed);
 
     if($checkpassword === false){
-        header("location: ../signup.html?error=wronglogin");
+        header("location: ../signup.html.php?error=wronglogin");
         exit();
     }
     elseif($checkpassword === true){
         session_start();
         $_SESSION["usersId"] = $userExists["usersId"];
         $_SESSION["userName"] = $userExists["userName"];
-        header("location: ../index.html");
+        header("location: ../index.html.php");
         exit();
     }
 }
