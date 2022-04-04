@@ -15,8 +15,12 @@
                 <li><a href="index.html.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact us</a></li>
-                <li><a href="login.html.php">Login</a></li>
-                <li><a href="signup.html.php" class="active">Signup</a></li>
+                <?php
+                if(isset($_SESSION['usersId'])){
+                    echo '<li><a href="profilepage.html.php">Profile page</a></li>
+                    <li><a href="include/logout.php" class="active">Log out</a></li>';
+                }
+                ?>
             </ul>
         </nav>
     </header>
