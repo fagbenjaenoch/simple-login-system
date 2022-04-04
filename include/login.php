@@ -1,4 +1,21 @@
 <?php
-if (isset($_POST['fullname']) && isset($_POST['password']))
-{ echo '<p style="text-align:center; color:#ff234d; font-weight: 700; font-family:sans-serif;">You have successfully Logged in</p>';}
-else echo 'ERROR!!';
+
+if (isset($_POST['submit'])){
+    
+    $username = $_POST["fullname"];
+    $password = $_POST["password"];
+
+    require_once 'dbh.php';
+    require_once 'functions.php';
+
+    if(emptyInputLogin( $username, $password)){
+        header("location: ../signup.html?error=emptyinput");
+        exit();
+    }
+
+    loginuser($conn, $username, $password);
+}
+else{
+    header("location: ../login.html");
+    exit();
+}
