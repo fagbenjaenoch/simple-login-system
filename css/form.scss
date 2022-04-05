@@ -88,13 +88,6 @@ form{
         }
     }
 }
-
-p{
-    text-align: center;
-    margin-top: 5px;
-    color: red;
-    font-weight: 900;
-}
 section.form-container{
     background: white;
     max-width: fit-content;
@@ -103,4 +96,11 @@ section.form-container{
     margin: 20px auto;
     position: relative;
     top: 150px;
+}
+
+p.err-message{
+    text-align: center;
+    margin-top: 5px;
+    color: red;
+    font-weight: 900;
 }

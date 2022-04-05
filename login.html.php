@@ -13,14 +13,14 @@
         </form>
         <p>Not Signed up? <a href="signup.html.php">Signup</a></p>
         <?php 
-        switch(isset($_GET["error"])){
-            case("emptyinput"):
-                echo "<p>Fill in all fields!</p>";
-                break;
+        if(isset($_GET["error"])){
+            if($_GET["error"] == "emptyinput"){
+                echo '<p class="err-message">Fill in all fields!</p>';
+            }
             
-            case("usernametaken"):
-                echo "<p>Fill in all fields!</p>";
-                break; 
+            elseif($_GET["error"] == "wronglogin"){
+                echo '<p class="err-message">Username or Password is incorrect!</p>';
+            }
         }
         ?>
     </div>

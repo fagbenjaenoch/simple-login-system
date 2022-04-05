@@ -33,7 +33,7 @@ function passwordMatch($password,$password_repeat){
     return $result;
 }
 function nameExists($conn, $fullname, $email){
-    $sql = "SELECT * FROM users WHERE usersName = ? OR usersEMail = ?;";
+    $sql = "SELECT * FROM users WHERE usersName = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt,$sql)){
         header("location: ../signup.html.php?error=stmtfailed");
@@ -90,7 +90,7 @@ function loginuser($conn, $username, $password){
     $checkpassword = password_verify($password, $passwordHashed);
 
     if($checkpassword === false){
-        header("location: ../signup.html.php?error=wronglogin");
+        header("location: ../login.html.php?error=wronglogin");
         exit();
     }
     elseif($checkpassword === true){

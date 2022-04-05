@@ -12,26 +12,22 @@
         </form>
         <p>Already Signed up? <a href="login.html.php">Login</a></p>
         <?php 
-        switch(isset($_GET["error"])){
-            case("emptyinput"):
-                echo "<p>Fill in all fields!</p>";
-                break;
+        if(isset($_GET["error"])){
+            if($_GET["error"] == "emptyinput"){
+                echo '<p class="err-message">Fill in all fields!</p>';
+            }
             
-            case("usernametaken"):
-                echo "<p>Fill in all fields!</p>";
-                break;
-            
-            case("invalidemail"):
-                echo "<p>Fill in all fields!</p>";
-                break;
-            
-            case("passwordmismatch"):
-                echo "<p>Fill in all fields!</p>";
-                break;
-            
-            case("emptyinput"):
-                echo "<p>Fill in all fields!</p>";
-                break;
+            elseif($_GET["error"] == "usernametaken"){
+                echo '<p class="err-message">Username has been taken try to use another!</p>';
+            }
+        
+            elseif($_GET["error"] == "invalidemail"){
+                echo '<p class="err-message">Invalid Email!</p>';
+            }
+
+            elseif($_GET["error"] == "passwordmismatch"){
+                echo '<p class="err-message">Your passwords don\'t match!</p>';
+            }
             
         }
         ?>
