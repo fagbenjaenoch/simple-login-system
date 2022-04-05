@@ -33,6 +33,13 @@ header .logo {
   cursor: pointer;
 }
 
+.err-message {
+  text-align: center;
+  margin-top: 10px;
+  color: red;
+  font-weight: 900;
+}
+
 ul {
   list-style-type: none;
   display: -webkit-box;
@@ -113,12 +120,7 @@ form button:hover {
   font-weight: bold;
 }
 
-p {
-  text-align: center;
-  margin-top: 5px;
-}
-
-.form-container {
+section.form-container {
   background: white;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;

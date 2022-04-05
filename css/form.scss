@@ -23,6 +23,12 @@ header{
         cursor: pointer;
     }
 }
+.err-message{
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+    font-weight: 900;
+} 
 ul{
     list-style-type: none;
     display: flex;
@@ -98,9 +104,5 @@ section.form-container{
     top: 150px;
 }
 
-p.err-message{
-    text-align: center;
-    margin-top: 5px;
-    color: red;
-    font-weight: 900;
-}
+
+
