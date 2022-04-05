@@ -96,7 +96,7 @@ function loginuser($conn, $username, $password){
     elseif($checkpassword === true){
         session_start();
         $_SESSION["usersId"] = $userExists["usersId"];
-        $_SESSION["userName"] = $userExists["userName"];
+        $_SESSION["usersName"] = $userExists["usersName"];
         header("location: ../index.html.php");
         exit();
     }

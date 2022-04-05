@@ -26,6 +26,7 @@ if (isset($_POST['submit'])){
         exit();
     }
     createUser($conn, $fullname, $email, $password);
+    header("location: ../login.html.php");
     
 }
 else{

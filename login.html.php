@@ -15,11 +15,11 @@
         <?php 
         if(isset($_GET["error"])){
             if($_GET["error"] == "emptyinput"){
-                echo '<p class="err-message">Fill in all fields!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Fill in all fields!</p>';
             }
             
             elseif($_GET["error"] == "wronglogin"){
-                echo '<p class="err-message">Username or Password is incorrect!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Username or Password is incorrect!</p>';
             }
         }
         ?>

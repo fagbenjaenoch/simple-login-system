@@ -14,19 +14,22 @@
         <?php 
         if(isset($_GET["error"])){
             if($_GET["error"] == "emptyinput"){
-                echo '<p class="err-message">Fill in all fields!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Fill in all fields!</p>';
             }
             
             elseif($_GET["error"] == "usernametaken"){
-                echo '<p class="err-message">Username has been taken try to use another!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Username has been taken try to use another!</p>';
             }
         
             elseif($_GET["error"] == "invalidemail"){
-                echo '<p class="err-message">Invalid Email!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Invalid Email!</p>';
             }
 
             elseif($_GET["error"] == "passwordmismatch"){
-                echo '<p class="err-message">Your passwords don\'t match!</p>';
+                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Your passwords don\'t match!</p>';
+            }
+            elseif($_GET["error"] == "none"){
+                echo '<p style="text-align: center; margin-top: 10px; color: #0faf7a; font-weight: 900;">You have signed up</p>';
             }
             
         }

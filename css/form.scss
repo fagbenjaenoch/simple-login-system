@@ -23,12 +23,10 @@ header{
         cursor: pointer;
     }
 }
-.err-message{
-    text-align: center;
-    margin-top: 10px;
-    color: red;
-    font-weight: 900;
-} 
+h1{
+    font-weight: 800;
+    font-size: 2em;
+}
 ul{
     list-style-type: none;
     display: flex;
