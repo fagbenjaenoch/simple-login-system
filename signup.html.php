@@ -1,6 +1,6 @@
-<?php
-    include_once 'include/header.php';
-?>
+<?php session_start(); ?>
+<?php include_once 'include/header.php'; ?>
+    
     <div>
         <h2>SIGNUP</h2>
         <form action="include/signup.php" method="post" enctype="multipart/form-data">

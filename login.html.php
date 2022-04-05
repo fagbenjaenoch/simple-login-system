@@ -1,8 +1,8 @@
-<?php
-    include_once 'include/header.php';
-    session_start();
+<?php session_start(); ?>
+<?php include_once 'include/header.php' ?>
     
-?>
+    
+
 <!-- <section class="form-container"> -->
     <div >
         <h2>LOGIN</h2>

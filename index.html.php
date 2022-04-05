@@ -1,6 +1,6 @@
-<?php
-    include_once 'include/main-header.php';
-?>
+<?php session_start(); ?>
+<?php  include_once 'include/main-header.php'; ?>
+
     <section>
         <h1>WELCOME TO MAILLY</h1>
     </section>
