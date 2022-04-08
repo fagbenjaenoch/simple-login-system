@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: var(--base);
 }
 :root{
@@ -71,7 +71,7 @@ form{
         padding: 5px;
         border: solid rgb(160, 160, 160) 1px;
         border-radius: 5px;
-        outline: var(--base) 5px;
+        outline-color: var(--base);
     }
     
     button{
@@ -100,6 +100,22 @@ section.form-container{
     margin: 20px auto;
     position: relative;
     top: 150px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.alert{
+    background: #b5ffb5;
+    color: var(--base);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.err-message{
+    background: #ffbdbd;
+    color: crimson;
+    height: fit-content;
+    padding: 5px;
 }
 
 

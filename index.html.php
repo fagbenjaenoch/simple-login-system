@@ -4,7 +4,12 @@
     <section>
         <?php
         if(isset($_SESSION['usersName'])){
-         echo "<p align=center style='color:#0faf7a; font-weight:600;'>Hi ". $_SESSION["usersName"]."</p>";
+          $session_user = $_SESSION['usersName'];
+          ?>
+          <p class="alert">
+            <?php echo "Hi $session_user " ?>
+          </p>
+          <?php
         }
           ?>
         <h1>WELCOME TO MAILLY</h1>

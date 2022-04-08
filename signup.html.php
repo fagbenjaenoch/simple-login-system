@@ -3,6 +3,49 @@
     
     <div>
         <h2>SIGNUP</h2>
+        <?php 
+        if(isset($_GET["error"])){
+            if($_GET["error"] == "emptyinput"){
+                ?>
+                <p class="alert err-message">
+                  <?php echo "Fill in all fields!" ?>
+                </p>
+                <?php
+            }
+            
+            elseif($_GET["error"] == "usernametaken"){
+                ?>
+                <p class="alert err-message">
+                  <?php echo "Username has been taken try to use another!" ?>
+                </p>
+                <?php
+            }
+        
+            elseif($_GET["error"] == "invalidemail"){
+                 ?>
+                <p class="alert err-message">
+                  <?php echo "Invalid Email!" ?>
+                </p>
+                <?php
+            }
+
+            elseif($_GET["error"] == "passwordmismatch"){
+                 ?>
+                <p class="alert err-message">
+                  <?php echo "Your passwords dont match!" ?>
+                </p>
+                <?php
+            }
+            elseif($_GET["error"] == "none"){
+                 ?>
+                <p class="alert success">
+                  <?php echo "You have signed up" ?>
+                </p>
+                <?php
+            }
+            
+        }
+        ?>
         <form action="include/signup.php" method="post" enctype="multipart/form-data">
             <input type="text" name="fullname" id="fullname" placeholder="Fullname">
             <input type="email" name="email" id="email" placeholder="Email">
@@ -11,28 +54,5 @@
             <button type="submit" value="Signup" name="submit">Signup</button>
         </form>
         <p>Already Signed up? <a href="login.html.php">Login</a></p>
-        <?php 
-        if(isset($_GET["error"])){
-            if($_GET["error"] == "emptyinput"){
-                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Fill in all fields!</p>';
-            }
-            
-            elseif($_GET["error"] == "usernametaken"){
-                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Username has been taken try to use another!</p>';
-            }
-        
-            elseif($_GET["error"] == "invalidemail"){
-                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Invalid Email!</p>';
-            }
-
-            elseif($_GET["error"] == "passwordmismatch"){
-                echo '<p style="text-align: center; margin-top: 10px; color: red; font-weight: 900;">Your passwords don\'t match!</p>';
-            }
-            elseif($_GET["error"] == "none"){
-                echo '<p style="text-align: center; margin-top: 10px; color: #0faf7a; font-weight: 900;">You have signed up</p>';
-            }
-            
-        }
-        ?>
     </div>
 <? include_once 'include/footer.php'; ?>

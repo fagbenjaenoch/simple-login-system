@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: var(--base);
 }
 
@@ -96,7 +96,7 @@ form input {
   padding: 5px;
   border: solid #a0a0a0 1px;
   border-radius: 5px;
-  outline: var(--base) 5px;
+  outline-color: var(--base);
 }
 
 form button {
@@ -128,5 +128,31 @@ section.form-container {
   margin: 20px auto;
   position: relative;
   top: 150px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.alert {
+  background: #b5ffb5;
+  color: var(--base);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.err-message {
+  background: #ffbdbd;
+  color: crimson;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
 }
 /*# sourceMappingURL=form.css.map */

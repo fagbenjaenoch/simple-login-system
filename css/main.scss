@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 :root{
     --base: #0faf7a;
@@ -63,4 +64,9 @@ section{
 }
 h1{
     text-align: center;
+}
+.alert{
+    text-align: center;
+    color:#0faf7a;
+     font-weight:600;
 }
