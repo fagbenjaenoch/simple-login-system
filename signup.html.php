@@ -16,7 +16,7 @@
             elseif($_GET["error"] == "usernametaken"){
                 ?>
                 <p class="alert err-message">
-                  <?php echo "Username has been taken try to use another!" ?>
+                  <?php echo "Username has been taken use another!" ?>
                 </p>
                 <?php
             }
