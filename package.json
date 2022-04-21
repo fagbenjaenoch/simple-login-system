@@ -1,0 +1,25 @@
+{
+  "name": "login-system-",
+  "version": "1.0.0",
+  "description": "User Authentication System",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fagbenjaenoch/Login-system-.git"
+  },
+  "keywords": [
+    "Login",
+    "Signup",
+    "User",
+    "authentication"
+  ],
+  "author": "Fagbenja Enoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fagbenjaenoch/Login-system-/issues"
+  },
+  "homepage": "https://github.com/fagbenjaenoch/Login-system-#readme"
+}
