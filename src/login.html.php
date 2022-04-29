@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php include_once 'include/header.php' ?>
+<?php include 'include/header.php' ?>
     
     
 
 <!-- <section class="form-container"> -->
-    <div >
+    <div>
         <h2>LOGIN</h2>
         <?php 
         if(isset($_GET["error"])){
@@ -33,4 +33,4 @@
         <p>Not Signed up? <a href="signup.html.php">Signup</a></p>
     </div>
     <!-- </section> -->
-    <?php  include_once 'include/footer.php'; ?>
+    <?php  include 'include/footer.php'; ?>
